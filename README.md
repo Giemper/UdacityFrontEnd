@@ -1,2 +1,4 @@
 # UdacityFrontEnd
-Projects done in the Udacity Front-End Nanodegree
+Projects done for the Udacity Front-End Nanodegree.
+
+Current Project: Animal Trading Cards
