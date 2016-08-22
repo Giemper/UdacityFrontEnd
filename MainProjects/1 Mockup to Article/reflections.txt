@@ -1,0 +1,22 @@
+You've learned a lot about web development so far. I want you to take a moment to write down your thoughts about web development here. 
+Answer the following questions:
+  
+
+* What new skills have you learned?
+  
+	I was already familiar with most of the elements used in this chapter, including the ones used in this projects. A new element to me was Figure.
+
+* What has been easy?
+  
+	The videos are really engaging, that makes everything easier.
+
+* What has been difficult?
+  
+	It hasn't been challaging so far. The part in which I spent more time figuring out was how to use the Udacity Chrome Plug-In, and a bit on Figures.
+	It was also kinda tricky to find all the details to make my mockup as similar to the pdf (The superscript "1" in the Deep Blue pharagraph almost went unnoticed).
+
+* How have you used the problem solving strategies from the first project to overcome challenges so far?
+
+	I learned to be really carefult with the use of
+ Tags, specially when closing them. Those little tags always go through the cracks!
+	Although not explained in this chapter, I used Margin in the Body to make the mockup look as close as the pdf example.

@@ -1,0 +1,31 @@
+h1{
+	font-size: 24px;
+}
+span{
+	font-weight: bold;
+}
+ul, li{
+	list-style: none;
+	padding: 0;
+}
+ul, li, p{
+	font-size: 11px;
+}
+#card{
+	max-width: 300px;
+
+	-webkit-box-shadow: 7px 7px 0px 0px rgba(230,230,230,1);
+	-moz-box-shadow: 7px 7px 0px 0px rgba(230,230,230,1);
+	box-shadow: 7px 7px 0px 0px rgba(230,230,230,1);
+}
+.image-size{
+	width: 300px;
+}
+.card-border{
+	border: 1px solid grey;
+	padding: 0 10px 0 10px;
+	margin: 10px 0 10px 0;
+}
+.fun-fact{
+	font-style: italic;
+}
