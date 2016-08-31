@@ -1,0 +1,26 @@
+.text-big {
+	font-size: 70px;
+}
+.not-body{
+	font-family: 'Lato', sans-serif;
+	color: #2D3C49;
+	font-weight: 300;
+}
+
+.text-grey {
+	color: #7D97AD;
+}
+
+.text-thin {
+	font-weight: 100;
+}
+
+.logo {
+	margin-top: 25px;
+	max-height: 110px;
+}
+
+.article-border {
+	border: 2px solid;
+	border-color: #2D3C49;
+}
