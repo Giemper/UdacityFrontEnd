@@ -1,6 +1,6 @@
 @import url(http://weloveiconfonts.com/api/?family=zocial);
 [class*="zocial-"]:before {
-  font-family: 'zocial', sans-serif;
+  font-family: "zocial", sans-serif;
 }
 
 h1 {
@@ -13,7 +13,7 @@ h2 {
 }
 
 body {
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 	color: #2D3C49;
 	font-weight: 300;
 }
@@ -32,7 +32,7 @@ footer li {
 	text-align: center;
 }
 
-footer a{
+footer a {
 	color: #7D97AD;
 	font-size: 30px;
 }
@@ -53,7 +53,7 @@ footer a{
 	margin-top: 10px;
 }
 
-.rect-color{
+.rect-color {
 	fill: #7D97AD;
 }
 
@@ -99,7 +99,7 @@ footer a{
 		font-weight: bold;
 	}
 
-	.upper-legend{
+	.upper-legend {
 		font-size: 25px;
 	}
 
