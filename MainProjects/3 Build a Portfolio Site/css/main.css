@@ -53,6 +53,10 @@ footer a{
 	margin-top: 10px;
 }
 
+.rect-color{
+	fill: #7D97AD;
+}
+
 @media screen and (max-width: 990px) {
 	h1 {
 		text-align: center;
