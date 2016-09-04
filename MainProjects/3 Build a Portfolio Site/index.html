@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css"/>
 	<link rel="stylesheet" href="css/main.css"/>
 
-	<title>Jane Doette - Front-End Ninja</title>
+	<title>Guillermo Magdaleno</title>
 </head>
 <body class="not-body">
 	<div class="container">
@@ -17,44 +17,69 @@
 				<img class="logo" src="images/udacity.svg" alt="Udacity">
 			</div>
 			<div class="col-md-10 text-right text-uppercase">
-				<h1 class="text-big text-thin">Guillermo Magdaleno</h1>
-				<h4>Software Engineer</h4>
+				<h1 class="text-thin">Guillermo Magdaleno</h1>
+				<h4 class="under-title">Software Engineer</h4>
 			</div>
 		</header>
-		<div class="row" style="margin-top: 10px">
+		<div class="row row-top">
 			<div class="col-md-12">
 				<svg width="100%" height="5">
 			  		<rect height="10" width="100%" style="fill: #7D97AD"/>
 				</svg>
 			</div>
 		</div>
-		<section class="row" style="margin-top: 10px">
+		<section class="row row-top"">
 			<div class="col-md-12">
-				<img class="img-responsive" src="images/Screenshot_0.png" style="width:100%">
+				<!-- <img class="img-responsive" src="images/Screenshot_0.png" srcset="images/Screenshot_0_sm.png 200w, images/Screenshot_0_md.png 400w, images/Screenshot_0.png 600w" sizes="50vw" style="width:100%"> -->
+				<picture>
+					<source media="(max-width:760px)" srcset="images/Screenshot_0_sm.png">
+					<source media="(max-width:990px)" srcset="images/Screenshot_0_med.png">
+					<img src="images/Screenshot_0.png" alt="Beautiful view of NYC from the Empire State Building" width="100%">
+				</picture>
 			</div>
 		</section>
-		<section class="row">
+		<section class="row row-top">
 			<div class="col-md-12">
-				<h2 class="text-grey"><strong>Udacity Front-End Nanodegree:</strong> Projects so far</h2>
+				<h2 class="upper-legend">
+					<strong>Udacity Front-End Nanodegree</strong>
+				</h2>
 			</div>
 		</section>
-		<section class="row" style="margin-top: 10px">
-			<div class="col-md-4 text-center">
-				<img class="img-responsive article-border" src="images/Screenshot_1.png" style="width:100%">
-				<h3 class="text-uppercase">Mockup to Article</h3>
-				<p>https://github.com/Giemper/UdacityFrontEnd/</p>
-			</div>
-			<div class="col-md-4 text-center">
-				<img class="img-responsive article-border" src="images/Screenshot_2.png" style="width:100%">
-				<h3 class="text-uppercase">Animal Trading Cards</h3>
-				<p>https://github.com/Giemper/UdacityFrontEnd/</p>
-			</div>
-			<div class="col-md-4 text-center">
-				<img class="img-responsive article-border" src="images/Screenshot_3.png" style="width:100%">
-				<h3 class="text-uppercase">Build a Portfolio</h3>
-				<p>https://github.com/Giemper/UdacityFrontEnd/</p>
-			</div>
+		<section class="row row-top">
+			<article class="col-md-3 col-sm-6 text-center articles">
+				<img class="img-responsive article-border" src="images/Screenshot_1.png">
+				<h3 class="text-uppercase article-overlay"><span>Mockup to Article</span></h3>
+				<p class="legend">Fun little project.</p>
+			</article>
+			<article class="col-md-3 col-sm-6 text-center articles">
+				<img class="img-responsive article-border" src="images/Screenshot_2.png">
+				<h3 class="text-uppercase article-overlay"><span>Trading Cards</span></h3>
+				<p class="legend">Coyotes are the best. </p>
+			</article>
+			<article class="col-md-3 col-sm-6 text-center articles">
+				<img class="img-responsive article-border" src="images/Screenshot_3.png">
+				<h3 class="text-uppercase article-overlay"><span>Build a Portfolio</span></h3>
+				<p class="legend">It's this site!</p>
+			</article>
+			<article class="col-md-3 col-sm-6 text-center articles">
+				<img class="img-responsive article-border" src="images/Screenshot_4.png">
+				<h3 class="text-uppercase article-overlay"><span>Much More?</span></h3>
+				<p class="legend">Still got plenty to go.</p>
+			</article>
 		</section>
 	</div>
+	<footer>
+		<ul>
+			<li class="font-item">
+				<a href="https://twitter.com/giemper" class="zocial-twitter"></a>
+			</li>
+			<li class="font-item">
+				<a href="https://reddit.com/u/giemper" class="zocial-reddit"></a>
+			</li>
+			<li class="font-item">
+				<a href="https://github.com/Giemper/UdacityFrontEnd" class="zocial-github"></a>
+			</li>	
+		</ul>
+	</footer>
 </body>
 </html>
