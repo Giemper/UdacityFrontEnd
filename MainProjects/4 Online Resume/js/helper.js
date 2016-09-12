@@ -58,8 +58,6 @@ var HTMLonlineURL = '<br><a href="#">%data%</a>';
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
-var twitterWidget = '<a class="twitter-timeline" href="https://twitter.com/giemper">Tweets by giemper</a>';
-
 
 /*
 The Internationalize Names challenge found in the lesson Flow Control from JavaScript Basics requires you to create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
@@ -135,7 +133,7 @@ function initializeMap() {
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    education.school.forEach(function(school){
+    education.schools.forEach(function(school){
       locations.push(school.location);
     });
 

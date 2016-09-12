@@ -1,3 +1,9 @@
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+
 body,
 div,
 ul,
@@ -11,7 +17,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .clear-fix {
@@ -26,15 +32,17 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #135D75;
   line-height: 48px;
   display: inline;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #135D75;
   line-height: 29px;
   padding: 10px;
 }
@@ -59,6 +67,15 @@ h4,
 h5 {
   padding:10px 5%;
 
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 3px solid #90C3D4;
+  margin: 1em 0;
+  padding: 0; 
 }
 
 
@@ -95,12 +112,12 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #f3f3f3;
+  color: #3D7E94;
   line-height: 28px;
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #90C3D4;
   display: none;
 }
 
@@ -109,12 +126,12 @@ a {
 }
 
 .orange-text {
-  color: #f5ae23;
+  /*NO LONGER ORANGE!*/
+  color: #90C3D4;
 }
 
 .white-text {
-  font-weight: bold;
-  color: #fff;
+  color: #000;
 }
 
 .gray {
@@ -124,12 +141,12 @@ a {
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  /*background-color: #4a4a4a;*/
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #FFF;
 }
 
 .flex-box {
@@ -154,6 +171,10 @@ a {
 
 ul {
   list-style-type: none;
+}
+#skills{
+  padding-left: 35px;
+  list-style-type: disc;
 }
 
 .biopic {

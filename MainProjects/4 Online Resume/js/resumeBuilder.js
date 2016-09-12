@@ -5,8 +5,8 @@ var bio = {
 	"contacts": {
 		"mobile": "(686)555-5555",
 		"email": "something@gmail.com",
-		"github": "https://github.com/Giemper",
-		"twitter": "https://twitter.com/giemper",
+		"github": "Giemper",
+		"twitter": "Giemper",
 		"location": "Mexicali"
 	},
 	"skills": ["Good at not coming up with info to fill here", "Bad at thinking about original messages at 12 am."],
@@ -33,43 +33,43 @@ var projects = {
 	"projects": [{
 		"title": "Mockup to Article",
 		"dates": "A week ago",
-		"description": "First projected submitted for revision in Udacity",
+		"description": "First projected submitted to Udacity",
 		"images": ["images/Screenshot_1.png"]
 	}, {
 		"title": "Animal Trading Cards",
 		"dates": "A few days ago",
-		"description": "Second projected submitted for revision in Udacity",
+		"description": "Second projected submitted to Udacity",
 		"images": ["images/Screenshot_2.png"]
 	}, {
 		"title": "Build a Portfolio Site",
 		"dates": "Yesterday",
-		"description": "third projected submitted for revision in Udacity",
+		"description": "Third projected submitted to Udacity",
 		"images": ["images/Screenshot_3.png"]
 	}]
 };
 
 var education = {
-	"school": [{
+	"schools": [{
 		"name": "Cetys University",
 		"location": "Mexicali, Baja California, Mexico",
 		"degree": "Bachelor of Science in Engineering",
-		"degreeDates": "August 2011 - June 2015",
+		"dates": "August 2011 - June 2015",
 		"url": "http://cetys.mx",
-		"major": ["Computer Science"]
+		"majors": ["Computer Science"]
 	}, {
 		"name": "Ecole Polytechnique de Montreal",
 		"location": "Montreal, Quebec, Canada",
 		"degree": "Academic Exchange",
-		"degreeDates": "July 2014 - December 2014",
+		"dates": "July 2014 - December 2014",
 		"url": "http://polymtl.ca",
-		"major": ["Genie Logiciel"]
+		"majors": ["Genie Logiciel"]
 	}, {
 		"name": "Stanford University",
 		"location": "Stanford, California, United States",
 		"degree": "2015 International Summer Program for Entrepeneurs",
-		"degreeDates": "August 2015",
-		"url": "",
-		"major": ["Summer Program in colaboration with the Consulate General of Mexico in Silicon Valley"]
+		"dates": "August 2015",
+		"url": "https://www.stanford.edu/",
+		"majors": ["Summer Program in colaboration with the Consulate General of Mexico in Silicon Valley"]
 	}],
 	"onlineCourses": [{
 		"title": "Front-End Nanodegree",
@@ -88,29 +88,25 @@ var maps = {
 bio.display = function () {
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+	var formattedMobile = HTMLcontactGeneric.replace("%data%", bio.contacts.mobile).replace(
+		"%contact%", '<span class="zocial-call"></span>');
+	var formattedEmail = HTMLcontactGeneric.replace("%data%", bio.contacts.email).replace(
+		"%contact%", '<span class="zocial-email"></span>');
+	var formattedGithub = HTMLcontactGeneric.replace("%data%", bio.contacts.github).replace(
+		"%contact%", '<span class="zocial-github"></span>');	
+	var formattedTwitter = HTMLcontactGeneric.replace("%data%", bio.contacts.twitter).replace(
+		"%contact%", '<span class="zocial-twitter"></span>');
+	var formattedLocation = HTMLcontactGeneric.replace("%data%", bio.contacts.location).replace(
+		"%contact%", '<span class="zocial-pinboard"></span>');
 	var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
 	var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
-	$("#header").prepend(formattedRole);
-	$("#header").prepend(formattedName);
-	$("#topContacts").append(formattedMobile);
-	$("#topContacts").append(formattedEmail);
-	$("#topContacts").append(formattedGithub);
-	$("#topContacts").append(formattedTwitter);
-	$("#topContacts").append(formattedLocation);
-	$("#header").append(formattedBiopic);
-	$("#header").append(formattedWelcome);
-
-	$("#footerContacts").append(formattedMobile);
-	$("#footerContacts").append(formattedEmail);
-	$("#footerContacts").append(formattedGithub);
-	$("#footerContacts").append(formattedTwitter);
-	$("#footerContacts").append(formattedLocation);
+	$("#header").prepend(formattedName, formattedRole);
+	$("#topContacts").append(formattedMobile, formattedEmail,
+		formattedGithub, formattedTwitter, formattedLocation);
+	$("#header").append(formattedBiopic, formattedWelcome);
+	$("#footerContacts").append(formattedMobile, formattedEmail,
+		formattedGithub, formattedTwitter, formattedLocation);
 
 	if(bio.skills.length > 1) {
 		$("#header").append(HTMLskillsStart);
@@ -130,10 +126,8 @@ work.display = function () {
 		var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
 
 		$("#workExperience").append(HTMLworkStart);	
-		$(".work-entry:last").append(formattedEmployerTitle);
-		$(".work-entry:last").append(formattedDates);
-		$(".work-entry:last").append(formattedLocation);
-		$(".work-entry:last").append(formattedDescription);
+		$(".work-entry:last").append(formattedEmployerTitle,
+			formattedDates, formattedLocation, formattedDescription);
 	});
 };
 
@@ -144,9 +138,8 @@ projects.display = function () {
 		var formattedDescription = HTMLprojectDescription.replace("%data%", project.description);
 
 		$("#projects").append(HTMLprojectStart);
-		$(".project-entry:last").append(formattedTitle);
-		$(".project-entry:last").append(formattedDates);
-		$(".project-entry:last").append(formattedDescription);
+		$(".project-entry:last").append(formattedTitle,
+			formattedDates, formattedDescription);
 
 		project.images.forEach(function(img) {
 			var formattedImage = HTMLprojectImage.replace("%data%", img);
@@ -156,18 +149,17 @@ projects.display = function () {
 };
 
 education.display = function () {
-	education.school.forEach(function(school) {
-		var formattedNameDegree = HTMLschoolName.replace("%data%", school.name) + 
+	education.schools.forEach(function(school) {
+		var formattedNameDegree = HTMLschoolName.replace("%data%", school.name).replace("#", school.url) + 
 			HTMLschoolDegree.replace("%data%", school.degree);
-		var formattedDates = HTMLschoolDates.replace("%data%", school.degreeDates);
+		var formattedDates = HTMLschoolDates.replace("%data%", school.dates);
 		var formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
 
 		$("#education").append(HTMLschoolStart);
-		$(".education-entry:last").append(formattedNameDegree);
-		$(".education-entry:last").append(formattedDates);
-		$(".education-entry:last").append(formattedLocation);
+		$(".education-entry:last").append(formattedNameDegree,
+			formattedDates, formattedLocation);
 
-		school.major.forEach(function(major) {
+		school.majors.forEach(function(major) {
 			var formattedMajor = HTMLschoolMajor.replace("%data%", major);
 			$(".education-entry:last").append(formattedMajor);
 		});
@@ -180,10 +172,28 @@ education.display = function () {
 		var formattedURL = HTMLonlineURL.replace("%data%", course.url);
 
 		$("#education").append(HTMLschoolStart);
-		$(".education-entry:last").append(formattedTitleSchool);
-		$(".education-entry:last").append(formattedDates);
-		$(".education-entry:last").append(formattedURL);
+		$(".education-entry:last").append(formattedTitleSchool,
+			formattedDates, formattedURL);
 	});
+};
+
+var rebooter = function() {
+	$("#main").toggleClass("container");
+
+	$("#workExperience").toggleClass("gray");
+	$("#workExperience").after('<br><hr>');
+
+	$("#projects").after('<br><hr>');
+
+	$("#education").toggleClass("gray");
+	$("#education").after('<br><hr>');
+
+	$("#projects").toggleClass("row");
+	$(".project-entry").each(function () {
+		$(this).toggleClass("col-md-4");
+	});
+
+	$("#lets-connect").find("h2").remove();
 };
 
 bio.display();
@@ -191,3 +201,4 @@ work.display();
 projects.display();
 education.display();
 maps.display();
+rebooter();
