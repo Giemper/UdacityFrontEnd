@@ -13,21 +13,22 @@
  * the canvas' context (ctx) object globally available to make writing app.js
  * a little simpler to work with.
  */
-
 var Engine = (function(global) {
     /* Predefine the variables we'll be using within this scope,
      * create the canvas element, grab the 2D context for that canvas
      * set the canvas elements height/width and add it to the DOM.
      */
+    
     var doc = global.document,
         win = global.window,
         canvas = doc.createElement('canvas'),
         ctx = canvas.getContext('2d'),
         lastTime;
 
-    canvas.width = 505;
-    canvas.height = 606;
+    canvas.width = 1010;
+    canvas.height = 920;
     doc.body.appendChild(canvas);
+    
 
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
@@ -47,7 +48,7 @@ var Engine = (function(global) {
          */
         update(dt);
         render();
-
+        
         /* Set our lastTime variable which is used to determine the time delta
          * for the next time this function is called.
          */
@@ -80,7 +81,26 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+        checkCollisions();
+    }
+
+    /*
+        This function looks within the tick if there was any collission between
+        the player and any bug. For symmetry reasons, the Y position of every
+        bug is 15 pts lower than the player.
+    */
+    function checkCollisions() {
+        allEnemies.forEach(function(enemy) {
+            if(enemy.y - 15 === player.y) {
+                var radio_left = enemy.x - 51;
+                var radio_right = enemy.x + 51;
+                
+                if((player.x >= radio_left) && (player.x <= radio_right)) {
+                    player.x = 505;
+                    player.y = 626;
+                }
+            }
+        });
     }
 
     /* This is called by the update function and loops through all of the
@@ -95,6 +115,7 @@ var Engine = (function(global) {
             enemy.update(dt);
         });
         player.update();
+        // console.log("seguido");
     }
 
     /* This function initially draws the "game level", it will then call
@@ -109,14 +130,18 @@ var Engine = (function(global) {
          */
         var rowImages = [
                 'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
+                'images/stone-block.png',   // Row 1 of 7 of stone
+                'images/stone-block.png',   // Row 2 of 7 of stone
+                'images/stone-block.png',   // Row 3 of 7 of stone
+                'images/stone-block.png',   // Row 4 of 7 of stone
+                'images/stone-block.png',   // Row 5 of 7 of stone
+                'images/stone-block.png',   // Row 6 of 7 of stone
+                'images/stone-block.png',   // Row 7 of 7 of stone
                 'images/grass-block.png',   // Row 1 of 2 of grass
                 'images/grass-block.png'    // Row 2 of 2 of grass
             ],
-            numRows = 6,
-            numCols = 5,
+            numRows = 10,
+            numCols = 10,
             row, col;
 
         /* Loop through the number of rows and columns we've defined above
