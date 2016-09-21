@@ -1,3 +1,46 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+}
+
 body {
     text-align: center;
+    background-color: #CBF5BC;
+}
+
+input[type="radio"] {
+    margin-top: -1px;
+    vertical-align: top;
+    max-height:100%;
+    height: 100%;
+}
+
+#container {
+    width:80%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#charSelect {
+    height: 120px;
+}
+
+#current-score {
+    float: left;
+}
+
+#high-score {
+    float: right;
+}
+
+#speed {
+    float: center;
+}
+
+.character {
+    height:100%;
+}
+
+.max-size{
+    max-width: 100%;
 }

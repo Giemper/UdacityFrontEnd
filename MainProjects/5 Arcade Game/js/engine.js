@@ -27,8 +27,10 @@ var Engine = (function(global) {
 
     canvas.width = 1010;
     canvas.height = 920;
-    doc.body.appendChild(canvas);
     
+    // doc.body.appendChild(canvas);
+    $("#container").prepend(canvas);
+    $("canvas").toggleClass("max-size");
 
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
@@ -98,6 +100,10 @@ var Engine = (function(global) {
                 if((player.x >= radio_left) && (player.x <= radio_right)) {
                     player.x = 505;
                     player.y = 626;
+                    path = 1;
+                    score = 0;
+                    $("#current-score").text("Score: " + score);
+                    $("#speed").text("Speed: " + path +"x");
                 }
             }
         });
@@ -172,6 +178,8 @@ var Engine = (function(global) {
         /* Loop through all of the objects within the allEnemies array and call
          * the render function you have defined.
          */
+        gem.render();
+
         allEnemies.forEach(function(enemy) {
             enemy.render();
         });
@@ -196,7 +204,12 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/char-boy.png',
+        'images/char-cat-girl.png',
+        'images/char-horn-girl.png',
+        'images/char-pink-girl.png',
+        'images/Star.png',
+        'images/Selector.png'
     ]);
     Resources.onReady(init);
 
