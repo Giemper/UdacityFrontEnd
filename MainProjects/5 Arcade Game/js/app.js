@@ -56,6 +56,7 @@ Player.prototype.update = function() {
         this.y = 626;
         path += 0.5;
         $("#speed").text("Speed: " + path + "x");
+        gem.setGem();
     }
 }
 
@@ -68,7 +69,6 @@ Player.prototype.handleInput = function(key) {
     else if(key === 'up') {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y -= 83);
         score ++;
-        console.log(this.y);
     }
     else if(key === 'right' && this.x !== 909)
         ctx.drawImage(Resources.get(this.sprite), this.x += 101, this.y);
@@ -77,24 +77,31 @@ Player.prototype.handleInput = function(key) {
         score--;
     }
     
+    setScore();
+
     //Tracks the score and the high score counters
-    $("#current-score").text("Score: " + score);
-    if(score > high_score){
-        high_score = score;
-        $("#high-score").text("High Score: " + score);
-    }
+    gem.crash();
 }
 
 var Gem = function() {
-    var xs = [0, 101, 202, 303, 404, 505, 606, 707, 808, 909];
-    var ys = [45, 128, 211, 294, 377, 460, 543];
+    this.xs = [0, 101, 202, 303, 404, 505, 606, 707, 808, 909];
+    this.ys = [45, 128, 211, 294, 377, 460, 543];
 
+    this.setGem();
+}
+
+Gem.prototype.render = function() {
+    if(this.draw === true)
+        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+}
+
+Gem.prototype.setGem = function() {
     var currentGem = Math.random() * 10;
-    if(currentGem < 6){
+    if(currentGem <= 6){
         this.sprite = 'images/Gem Blue.png';
         this.value = 2;
     }
-    else if(currentGem < 10) {
+    else if(currentGem <= 9) {
         this.sprite = 'images/Gem Green.png';
         this.value = 5;
     }
@@ -102,19 +109,20 @@ var Gem = function() {
         this.sprite = 'images/Gem Orange.png';
         this.value = 10;
     }
-    this.x = xs[Math.random() * (xs.length - 1)];
-    this.y = ys[Math.random() * (ys.length - 1)];
-}
 
-Gem.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    this.x = this.xs[Math.floor(Math.random() * ((this.xs.length) - 1))];
+    this.y = this.ys[Math.floor(Math.random() * ((this.ys.length) - 1))];
+
+    this.draw = true;
 }
 
 Gem.prototype.crash = function() {
     if(player.x === this.x && player.y === this.y) {
-        this.x = -50;
-        this.y = -50;
-        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+        this.draw = false;
+        this.render();
+
+        score += this.value;
+        setScore();
     }
 }
 
@@ -157,3 +165,11 @@ $(".character").click(function() {
     $(this).toggleClass("star"); 
     currentSprite = this.value;
 });
+
+var setScore = function() {
+    $("#current-score").text("Score: " + score);
+    if(score > high_score){
+        high_score = score;
+        $("#high-score").text("High Score: " + score);
+    }
+}

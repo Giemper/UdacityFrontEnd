@@ -100,6 +100,8 @@ var Engine = (function(global) {
                 if((player.x >= radio_left) && (player.x <= radio_right)) {
                     player.x = 505;
                     player.y = 626;
+                    gem.setGem();
+                    setScore();
                     path = 1;
                     score = 0;
                     $("#current-score").text("Score: " + score);
@@ -117,6 +119,8 @@ var Engine = (function(global) {
      * render methods.
      */
     function updateEntities(dt) {
+        gem.render();
+
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
@@ -209,7 +213,10 @@ var Engine = (function(global) {
         'images/char-horn-girl.png',
         'images/char-pink-girl.png',
         'images/Star.png',
-        'images/Selector.png'
+        'images/Selector.png',
+        'images/Gem Blue.png',
+        'images/Gem Green.png',
+        'images/Gem Orange.png'
     ]);
     Resources.onReady(init);
 
