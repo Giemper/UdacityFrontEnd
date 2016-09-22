@@ -1,6 +1,13 @@
+//Default sprite
 var currentSprite = "images/char-boy.png";
+
+//Current Score
 var score = 0;
+
+//Session's highest score
 var high_score = score;
+
+//Global speed of the player
 var path = 1.0;
 
 // Enemies our player must avoid
@@ -22,6 +29,8 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+    //The speed is also multiplied by the times the player has
+    //compleated the map without crashing. If he does, the speed is reseted.
     this.x += this.speed * dt * path;
 
     if(this.x >= 1010) {
@@ -43,6 +52,7 @@ var Player = function() {
     this.y = 626; //Increments of 83 -- Y Grid Starts at -38
 }
 
+//Draws and updates the player sprite.
 Player.prototype.render = function() {
     this.sprite = currentSprite;
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -83,6 +93,8 @@ Player.prototype.handleInput = function(key) {
     gem.crash();
 }
 
+//Creates the Gems that gives extra points to the player!
+//xs and ys are the exact coordinates in which the gem can appear.
 var Gem = function() {
     this.xs = [0, 101, 202, 303, 404, 505, 606, 707, 808, 909];
     this.ys = [45, 128, 211, 294, 377, 460, 543];
@@ -90,11 +102,14 @@ var Gem = function() {
     this.setGem();
 }
 
+//Render function adds the gem at every tick.
+//this.draw checks if the player already collected the gem. If he does, the gem dissapears.. Magic!
 Gem.prototype.render = function() {
     if(this.draw === true)
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
 
+//setGem function selects the position, color and value 
 Gem.prototype.setGem = function() {
     var currentGem = Math.random() * 10;
     if(currentGem <= 6){
@@ -116,6 +131,8 @@ Gem.prototype.setGem = function() {
     this.draw = true;
 }
 
+//crash checks if the player and the gem are in the same position.
+//If they do, the gem dissapears and the value of the generated gem is added to the score.
 Gem.prototype.crash = function() {
     if(player.x === this.x && player.y === this.y) {
         this.draw = false;
@@ -132,6 +149,7 @@ Gem.prototype.crash = function() {
 
 var player = new Player();
 
+//Starts the gem
 var gem = new Gem();
 
 //Creates all 7 enemies (one for each lane)
@@ -160,12 +178,15 @@ document.addEventListener('keyup', function(e) {
 });
 
 //Changes the playable character
+//The class star asigns a background to the current selection.
 $(".character").click(function() {
     $(".character").removeClass("star");
     $(this).toggleClass("star"); 
     currentSprite = this.value;
 });
 
+//Updates the score UI.
+//Compares the current score with the highest score the player has made.
 var setScore = function() {
     $("#current-score").text("Score: " + score);
     if(score > high_score){
