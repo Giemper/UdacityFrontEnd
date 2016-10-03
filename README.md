@@ -11,6 +11,7 @@ Some of the projects make use of third-party libraries like [Bootstrap](http://g
 - [Build a Portfolio Site](https://github.com/Giemper/UdacityFrontEnd/tree/master/MainProjects/3%20Build%20a%20Portfolio%20Site)
 - [Online Resume](https://github.com/Giemper/UdacityFrontEnd/tree/master/MainProjects/4%20Online%20Resume)
 - [Arcade Game: Frogger](https://github.com/Giemper/UdacityFrontEnd/tree/master/MainProjects/5%20Arcade%20Game)
+- [Website Optimization](https://github.com/Giemper/UdacityFrontEnd/tree/master/MainProjects/6%20Website%20Optimization)
 
 ## Small Projects
 The **Small Projects** folder contains the smaller content made within lessons in the Nanodegree.
@@ -22,9 +23,10 @@ Just like in the **Main Projects**, some of these projects contain third-party l
 - [Responsive Blog](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/3_ResponsiveBlog)
 - [Responsive Site](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/3_ResponsiveSite)
 - [Meme Maker](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/4_Canvas)
+- [Web Workers](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/5_WebWorkers)
 
 ### Nanodegree Status:
-**Lesson:** Classic Arcade Game Clone
-**Chapter:** Writing READMEs
-**Date:** 09/19/2016
+- **Lesson:** Classic Arcade Game Clone
+- **Chapter:** Writing READMEs
+- **Date:** 09/19/2016
 
