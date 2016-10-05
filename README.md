@@ -24,6 +24,7 @@ Just like in the **Main Projects**, some of these projects contain third-party l
 - [Responsive Site](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/3_ResponsiveSite)
 - [Meme Maker](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/4_Canvas)
 - [Web Workers](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/5_WebWorkers)
+- [Ajax Project](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/6_Ajax)
 
 ### Nanodegree Status:
 - **Lesson:** Classic Arcade Game Clone

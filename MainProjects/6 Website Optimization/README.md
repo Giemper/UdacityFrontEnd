@@ -20,16 +20,18 @@ Projects done in the Udacity Front-End Nanodegree.
 - Modified function *updatePositions()* by repositioning repetitive steps from the *for* loop.
 - Moved *var pizzaDiv* from *for loop* in line 456.
 
-### Running these code
+## Running these code
 
 #### Web Mirror
-[Index.html Demo](http://giemper.com/Udacity/Optimize/)
-[Pizza.html Demo](http://giemper.com/Udacity/Optimize/views/pizza.html)
+- [Index.html Demo](http://giemper.com/Udacity/Optimize/)
+- [Pizza.html Demo](http://giemper.com/Udacity/Optimize/views/pizza.html)
 
 #### GitHub*
 [Repository](https://github.com/Giemper/UdacityFrontEnd/tree/master/MainProjects/6%20Website%20Optimization)
 
 Cloning the repo or Download the zip
 ![GitHub Clone](http://image.prntscr.com/image/10ddd47b37e24f149532164e15abf2e2.png)
+
+This project will be found at *Main Projects > 6 Website Optimization*. The entry point is *index.html*.
 
 *Contains all the projects from the Udacity Front-End Nanodegree
