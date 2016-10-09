@@ -1,4 +1,4 @@
-h1, h2 {
+h1, h2, label {
     font-family: 'Arial', sans-serif;
 }
 ul {
@@ -12,9 +12,9 @@ ul li {
     font-family: 'Arial', sans-serif;
     margin-bottom: 8px;
 }
-#cat-list {
+#cat-panel {
     overflow-y: auto;
-    height:90%;
+    height:80%;
 }
 #cat-list li {
     color:white;
@@ -22,15 +22,18 @@ ul li {
 #cat-list li a {
     padding-left: 15px;
 }
-#clicker:hover, #cat-list li:hover {
+#clicker:hover, #cat-list li:hover, #admin:hover, #pets:hover {
     background-color: rgba(255, 255, 255, 0.1);
     cursor:pointer;
 }
-#clicker {
+#clicker, #admin, #pets {
     margin-top: 5px;
     /*margin-left: 75px;*/
     font-size: 50px;
     color: white;
+}
+#pets-button {
+    display: none;
 }
 #topline, #leftline{
     top: 0; 
@@ -48,13 +51,15 @@ ul li {
     bottom: 0;
     width: 200px;
     background: #28426b;
+    display: inline-block;
+    height: 100%;
 }
-#cosa {
+.cosa {
     height:60px; 
     position: relative;
     background: #68A37F;
 }
-#cosa2 {
+.cosa2 {
     width: 50px;
     margin-left:auto;
     margin-right:auto;
@@ -67,11 +72,20 @@ ul li {
 }
 #space {
   width: 100%;
-  max-width:1200px;
+  max-width:970px;
   margin-left: auto ;
   margin-right: auto ;
 }
-.no-highlight {
+#admin-menu {
+    width: 50%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.admin-toggle {
+    display: none;
+}
+.no-highlight, label {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -79,10 +93,13 @@ ul li {
     -ms-user-select: none;
     user-select: none;
 }
+.size {
+    height: 100%;
+}
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 700px) {
     #leftline {
-        height: 35%;
+        height: 60px;
         width: 100%;
         position: fixed;
         top: auto;
@@ -90,6 +107,9 @@ ul li {
         left: 0;
         right: 0;
         background: #28426b;
+    }
+    #pets-button {
+        display: block;
     }
     #top-content {
         margin: 0 10px 0 10px;
@@ -102,8 +122,21 @@ ul li {
         font-size: 50px;
         color: white;
     }
-    #cat-list {
+    /*#cat-panel {
+        display: none;
+    }*/
+    #cat-panel {
         overflow-y: auto;
-        height: 50%;
+        height: 30%;
+    }
+    #control-panel {
+        display: inline-flex;
+        width: 100%;
+    }
+    .cosa {
+        width: 50%;
+    }
+    .size {
+        min-height: 40%;
     }
 }

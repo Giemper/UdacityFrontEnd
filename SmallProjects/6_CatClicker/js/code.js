@@ -1,5 +1,6 @@
 var count = [];
 var cat = [];
+var current = 0;
 var resources = {
     cat_repo : [
         'images/cat.jpg',
@@ -64,12 +65,14 @@ var Cat = function (id) {
     
     $("#counter").text("Counter: " + (count[id] = 0));
     this.setCat(id);
+    this.getCat(id);
     this.Render(id);
 
     $("#cat-canvas").on("click", function () {
         if ($('#cat-canvas').prop('title') === "cat" + id) {
             count[id]++;
             $("#counter").text("Counter: " + count[id]);
+            $("#admin-counter").val(count[id]);
         }
     });
 };
@@ -89,20 +92,34 @@ Cat.prototype.Render = function (id) {
 
     $("#cat-title").text(this.full_name);
     $("#counter").text("Counter: " + count[id]);
+        
 }
 
 Cat.prototype.setCat = function(id) {
-    $("#cat-list").append('<li class="no-highlight cat-pick" id="' + this.id + '"><a>' + this.full_name + '</a></li>');
+    $("#cat-list").append('<li class="no-highlight cat-pick" id="' + this.id + '"><a id="a-'+this.id+'">' + this.full_name + '</a></li>');
     $('#cat-canvas').prop('title', this.id);
+    current = id;
 
     $(".cat-pick").last().on("click", function () {
+        current = id;
         $('#cat-canvas').prop('title', cat[id].id);
+        cat[id].getCat(id);
         cat[id].Render(id);
+
     });
 }
 
-$("#clicker").click(function () {
-    cat[cat.length] = new Cat(cat.length);
-});
+Cat.prototype.getCat = function(id) {
+    $("#admin-name").val(this.full_name);
+    $("#admin-url").val(this.src);
+    $("#admin-counter").val(count[id]);
+}
+
+Cat.prototype.updateCat = function(id) {
+    this.full_name = $("#admin-name").val();
+    this.src = $("#admin-url").val();
+    count[id] = parseInt($("#admin-counter").val());
+    $("#a-"+this.id).text(this.full_name);
+}
 
 cat[cat.length] = new Cat(cat.length);

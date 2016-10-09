@@ -21,24 +21,60 @@
 
     <section id="content">
         <div class="container">
-            <div id="space">
+            <div id="space" style="min-height:200%">
                 <br>
                 <canvas id="cat-canvas" width="800" height="500" style="width:100%" title=""></canvas>
                 <h2 id="counter" class="no-highlight" style="text-align: center;">Counter: 0</h2>
+                <form id="admin-menu" class="admin-toggle">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="width:30%"><label>Cat Name:</label></td>
+                            <td style="width:70%"><input id="admin-name" type="text" style="width:100%"></td>
+                        </tr>
+                        <tr>
+                            <td style="width:30%"><label>Image URL:</label></td>
+                            <td style="width:70%"><input id="admin-url" type="text" style="width:100%"></td>
+                        </tr>
+                        <tr>
+                            <td style="width:30%"><label>Counter:</label></td>
+                            <td style="width:70%"><input id="admin-counter" type="text" style="width:100%"></td>
+                        </tr>
+                    </table>
+
+                    <input id="admin-cancel" type="button" value="cancel">
+                    <input id="admin-save" type="button" value="save">
+                </form>
+                <br><br>
             </div>
         </div>
     </section>
 
-    <aside id="leftline" >
-        <header id="cosa">
-            <div id="cosa2">
-                <h2 id="clicker" class="material-icons no-highlight">add</h2>    
-            </div>
-        </header>
-        <h2 class="no-highlight" style="color:white;text-align:center;">Cats</h2>
-        <ul id="cat-list"></ul>
+    <aside id="leftline">
+        <div id="control-panel">
+            <header class="cosa">
+                <div class="cosa2">
+                    <h2 id="clicker" class="material-icons no-highlight">add</h2>    
+                </div>
+            </header>
+            <header class="cosa" style="background-color:#e58787">
+                <div class="cosa2">
+                    <h2 id="admin" class="material-icons no-highlight">grade</h2>    
+                </div>
+            </header>
+            <header id="pets-button" class="cosa" style="background-color:#7ab0c9">
+                <div class="cosa2">
+                    <h2 id="pets" title="hidden" class="material-icons no-highlight">pets</h2>    
+                </div>
+            </header>
+        </div>
+        <div id="cat-panel" style="height:100%">
+            <h2 class="no-highlight" style="color:white;text-align:center;">Cats</h2>
+            <ul id="cat-list"></ul>
+            <br><br><br><br><br><br><br>
+        </div>
     </aside>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/code.js"></script>
+    <script src="js/inputs.js"></script>
 </body>
