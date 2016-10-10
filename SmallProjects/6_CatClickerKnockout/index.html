@@ -14,7 +14,7 @@
     <nav id="topline">
         <header id="top-content">
             <div class="container">
-                <h1 id="cat-title" class="no-highlight" style="text-align: center">GATOS</h1>
+                <h1 id="cat-title" class="no-highlight" style="text-align: center" data-bind="text: currentCat().full_name"></h1>
             </div>
         </header>
     </nav>
@@ -23,9 +23,9 @@
         <div class="container">
             <div id="space" style="min-height:200%">
                 <br>
-                <canvas id="cat-canvas" width="800" height="500" style="width:100%" title=""></canvas>
-                <h2 id="counter" class="no-highlight" style="text-align: center;">Counter: 0</h2>
-                <h3 id="cat-state" class="no-highlight" style="text-align: center;">Baby Cat</h3>
+                <canvas id="cat-canvas" width="800" height="500" style="width:100%" data-bind="click: catClick"></canvas>
+                <h2 id="counter" class="no-highlight" style="text-align: center;" data-bind="text: currentCat().count"></h2>
+                <h3 id="cat-state" class="no-highlight" style="text-align: center;" data-bind="text: currentCat().level"></h3>
                 <form id="admin-menu" class="admin-toggle">
                     <table style="width:100%">
                         <tr>
@@ -70,12 +70,17 @@
         </div>
         <div id="cat-panel" style="height:100%">
             <h2 class="no-highlight" style="color:white;text-align:center;">Cats</h2>
-            <ul id="cat-list"></ul>
+            <ul id="cat-list" data-bind="foreach: cats">
+                <li class="no-highlight cat-pick" data-bind="click: catPick">
+                    <a data-bind="text: full_name"></a>
+                </li>
+            </ul>
             <br><br><br><br><br><br><br>
         </div>
     </aside>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/knockout-3.4.0.js"></script>
     <script src="js/code.js"></script>
     <script src="js/inputs.js"></script>
 </body>
