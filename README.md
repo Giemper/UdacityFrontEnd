@@ -24,9 +24,9 @@ Just like in the **Main Projects**, some of these projects contain third-party l
 - [Responsive Site](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/3_ResponsiveSite)
 - [Meme Maker](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/4_Canvas)
 - [Web Workers](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/5_WebWorkers)
-- [Ajax Project](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/6_Ajax)
-- [Cat Clicker](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/6_CatClicker)
-- [Cat Clicker + Knockout](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/6_CatClickerKnockout)
+- [Ajax Project](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/7_Ajax)
+- [Cat Clicker](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/7_CatClicker)
+- [Cat Clicker + Knockout](https://github.com/Giemper/UdacityFrontEnd/tree/master/SmallProjects/7_CatClickerKnockout)
 
 ### Nanodegree Status:
 - **Lesson:** Neighborhood Map
