@@ -73,9 +73,26 @@ var Cat = function (id) {
             count[id]++;
             $("#counter").text("Counter: " + count[id]);
             $("#admin-counter").val(count[id]);
+
+            cat[id].levelCat(id);
         }
     });
 };
+
+Cat.prototype.levelCat = function (id) {
+    if(count[id] < 20)
+        $("#cat-state").text("Baby Kitty");
+    else if(count[id] < 50)
+        $("#cat-state").text("Infant Kitty");
+    else if(count[id] < 100)
+        $("#cat-state").text("Child Kitty");
+    else if(count[id] < 500)
+        $("#cat-state").text("Teen Cat");
+    else if(count[id] < 1000)
+        $("#cat-state").text("Adult Cat");
+    else
+        $("#cat-state").text("Ninja Lion");
+}
 
 Cat.prototype.Render = function (id) {
     var img = new Image();
@@ -98,6 +115,7 @@ Cat.prototype.Render = function (id) {
 Cat.prototype.setCat = function(id) {
     $("#cat-list").append('<li class="no-highlight cat-pick" id="' + this.id + '"><a id="a-'+this.id+'">' + this.full_name + '</a></li>');
     $('#cat-canvas').prop('title', this.id);
+    this.levelCat(id);
     current = id;
 
     $(".cat-pick").last().on("click", function () {
@@ -105,7 +123,7 @@ Cat.prototype.setCat = function(id) {
         $('#cat-canvas').prop('title', cat[id].id);
         cat[id].getCat(id);
         cat[id].Render(id);
-
+        cat[id].levelCat(id);
     });
 }
 
@@ -120,6 +138,7 @@ Cat.prototype.updateCat = function(id) {
     this.src = $("#admin-url").val();
     count[id] = parseInt($("#admin-counter").val());
     $("#a-"+this.id).text(this.full_name);
+    this.levelCat(id);
 }
 
 cat[cat.length] = new Cat(cat.length);
