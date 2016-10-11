@@ -1,0 +1,63 @@
+h1, h2, h3, label, ul li {
+    font-family: 'Arial', sans-serif;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: calc(100% - 65px);
+}
+ul {
+    list-style: none;
+    width:100%;
+    margin-left: -40px;
+}
+ul li {
+    width:100%;
+    color: white;
+    margin-bottom: 10px;
+}
+#map {
+    height: 100%;
+}
+#points li a {
+    padding-left: 15px;
+}
+#points li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor:pointer;
+}
+#topline, #leftline{
+    top: 0; 
+    left: 0;
+}
+#topline {
+    right: 0;
+    height:60px; 
+    position: fixed;
+    background-color: #f4f5f7;
+    box-shadow: 0px 3px 10px #888888;
+}
+#leftline {
+    position: fixed;
+    bottom: 0;
+    width: 200px;
+    background: #28426b;
+    display: inline-block;
+    height: 100%;
+}
+#top-content {
+    margin: 0 0 0 210px;
+}
+#content {
+    margin: 65px 0 0 200px;
+    padding: 0;
+    height: 100%;
+}
+.cosa {
+    height:60px; 
+    position: relative;
+    background: #68A37F;
+}
