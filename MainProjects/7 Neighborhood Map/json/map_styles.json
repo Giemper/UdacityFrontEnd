@@ -1,0 +1,121 @@
+[{
+	"featureType": "administrative",
+	"elementType": "all",
+	"stylers": [{
+		"visibility": "on"
+	}, {
+		"lightness": 33
+	}]
+}, {
+	"featureType": "administrative.country",
+	"elementType": "labels.text.fill",
+	"stylers": [{
+		"color": "#226964"
+	}]
+}, {
+	"featureType": "administrative.province",
+	"elementType": "labels.text.fill",
+	"stylers": [{
+		"color": "#163045"
+	}]
+}, {
+	"featureType": "administrative.locality",
+	"elementType": "labels.text.fill",
+	"stylers": [{
+		"color": "#1b5d69"
+	}]
+}, {
+	"featureType": "administrative.neighborhood",
+	"elementType": "labels.text.fill",
+	"stylers": [{
+		"color": "#212d48"
+	}]
+}, {
+	"featureType": "landscape",
+	"elementType": "all",
+	"stylers": [{
+		"color": "#f2e5d4"
+	}]
+}, {
+	"featureType": "landscape.man_made",
+	"elementType": "all",
+	"stylers": [{
+		"visibility": "off"
+	}]
+}, {
+	"featureType": "poi",
+	"elementType": "all",
+	"stylers": [{
+		"visibility": "off"
+	}]
+}, {
+	"featureType": "poi.park",
+	"elementType": "geometry",
+	"stylers": [{
+		"color": "#c5dac6"
+	}]
+}, {
+	"featureType": "poi.park",
+	"elementType": "labels",
+	"stylers": [{
+		"visibility": "on"
+	}, {
+		"lightness": 20
+	}]
+}, {
+	"featureType": "road",
+	"elementType": "all",
+	"stylers": [{
+		"lightness": 20
+	}]
+}, {
+	"featureType": "road.highway",
+	"elementType": "geometry",
+	"stylers": [{
+		"color": "#c5c6c6"
+	}]
+}, {
+	"featureType": "road.highway",
+	"elementType": "labels.text",
+	"stylers": [{
+		"visibility": "off"
+	}]
+}, {
+	"featureType": "road.highway",
+	"elementType": "labels.icon",
+	"stylers": [{
+		"visibility": "off"
+	}]
+}, {
+	"featureType": "road.arterial",
+	"elementType": "geometry",
+	"stylers": [{
+		"color": "#e4d7c6"
+	}]
+}, {
+	"featureType": "road.local",
+	"elementType": "all",
+	"stylers": [{
+		"visibility": "on"
+	}]
+}, {
+	"featureType": "road.local",
+	"elementType": "geometry",
+	"stylers": [{
+		"color": "#fbfaf7"
+	}]
+}, {
+	"featureType": "road.local",
+	"elementType": "labels.text",
+	"stylers": [{
+		"visibility": "off"
+	}]
+}, {
+	"featureType": "water",
+	"elementType": "all",
+	"stylers": [{
+		"visibility": "on"
+	}, {
+		"color": "#acbcc9"
+	}]
+}]

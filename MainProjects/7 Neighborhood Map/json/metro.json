@@ -1,0 +1,241 @@
+[
+    {
+        "name": "Jean-Talon",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange-blue",
+        "line": [{ "color": "Orange", "id": 8 }, { "color": "Blue", "id": 4 }]
+    }, {
+        "name": "Berri-UQAM",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange-green-yellow",
+        "line": [{ "color": "Orange", "id": 14 }, { "color": "Green", "id": 13 }, { "color": "Yellow", "id": 1 }]
+    }, {
+        "name": "Lionel-Groulx",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange-green",
+        "line": [{ "color": "Orange", "id": 21 }, { "color": "Green", "id": 20 }]
+    }, {
+        "name": "Snowdon",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange-blue",
+        "line": [{ "color": "Orange", "id": 25 }, { "color": "Blue", "id": 12 }]
+    }, 
+
+    
+
+
+
+    {
+        "name": "Montmorency",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 1 }]
+    }, {
+        "name": "De La Concorde",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 2 }]
+    }, {
+        "name": "Cartier",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 3 }]
+    }, {
+        "name": "Henri-Bourassa",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 4 }]
+    }, {
+        "name": "Sauvé",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 5 }]
+    }, {
+        "name": "Crémazie",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 6 }]
+    }, {
+        "name": "Jarry",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 7 }]
+    }, {
+        "name": "Beaubien",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 9 }]
+    }, {
+        "name": "Rosemont",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 10 }]
+    }, {
+        "name": "Laurier",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 11 }]
+    }, {
+        "name": "Mont-Royal",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 12 }]
+    }, {
+        "name": "Sherbrooke",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 13 }]
+    }, {
+        "name": "Champ-De-Mars",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 15 }]
+    }, {
+        "name": "Place-D'Armes",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 16 }]
+    }, {
+        "name": "Square-Victoria-OACI",
+        "lat": 45.501723,
+        "lng": -73.564006,
+        "value": "orange",
+        "id": 1,
+        "line": [{ "color": "Orange", "id": 17 }]
+    }, {
+        "name": "Bonaventure",
+        "lat": 45.498025,
+        "lng": -73.566839,
+        "value": "orange",
+        "id": 2,
+        "line": [{ "color": "Orange", "id": 18 }]
+    }, {
+        "name": "Lucien-L'Allier",
+        "lat": 45.495051, 
+        "lng": -73.570938,
+        "value": "orange",
+        "id": 3,
+        "line": [{ "color": "Orange", "id": 19 }]
+    }, {
+        "name": "Georges-Vanier",
+        "lat": 45.488909,
+        "lng": -73.576502,
+        "value": "orange",
+        "id": 4,
+        "line": [{ "color": "Orange", "id": 20 }]
+    }, {
+        "name": "Place-Saint-Henri",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 22 }]
+    }, {
+        "name": "Vendôme",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 23 }]
+    }, {
+        "name": "Villa-Maria",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 24 }]
+    }, {
+        "name": "Côte-Sainte-Catherine",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 26 }]
+    }, {
+        "name": "Plamondon",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 27 }]
+    }, {
+        "name": "Namur",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 28 }]
+    }, {
+        "name": "De La Savane",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 29 }]
+    }, {
+        "name": "Du Collège",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 30 }]
+    }, {
+        "name": "Côte-Vertu",
+        "lat": 0,
+        "lng": 0,
+        "value": "orange",
+        "line": [{ "color": "Orange", "id": 31 }]
+    },
+
+
+
+
+
+    {
+        "name": "dd",
+        "lat": 0,
+        "lng": 0,
+        "value": "blue",
+        "line": [ { "color": "Blue", "id": 1 } ]
+    },
+
+
+
+
+
+    {
+        "name": "",
+        "lat": 0,
+        "lng": 0,
+        "value": "green",
+        "line": [ { "color": "Green", "id": 1 } ]
+    },
+
+
+
+
+
+    {
+        "name": "Jean-Drapeau",
+        "lat": 45.512441,
+        "lng": -73.533033,
+        "value": "yellow",
+        "line": [ { "color": "Yellow", "id": 2 } ]
+    }, {
+        "name": "Longueuil",
+        "lat": 45.524830, 
+        "lng": -73.522112,
+        "value": "yellow",
+        "line": [ { "color": "Yellow", "id": 3 } ]
+    }
+]

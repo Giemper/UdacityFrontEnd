@@ -1,27 +1,67 @@
 var ViewModel = function () {
-    this.points = ko.observableArray([
-        {
-            name: "Square-Victoria-OACI",
-            lat: 45.501723,
-            lng: -73.564006,
-            location: { lat: 45.501723, lng: -73.564006}
-        }, {
-            name: "Bonaventure",
-            lat: 45.498025,
-            lng: -73.566839,
-            location: { lat: 45.501723, lng: -73.564006}
-        }, {
-            name: "Lucien-L'Allier",
-            lat: 45.495051, 
-            lng: -73.570938,
-            location: { lat: 45.501723, lng: -73.564006}
-        }, {
-            name: "Georges-Vanier",
-            lat: 45.488909,
-            lng: -73.576502,
-            location: { lat: 45.501723, lng: -73.564006}
+    this.pins = ko.observableArray([]);
+
+    this.Pin = function (Title, Latitude, Longitude) {
+        this.marker = new google.maps.Marker({
+            position: { lat: Latitude, lng: Longitude },
+            map: map,
+            animation: google.maps.Animation.DROP,
+            title: Title
+        });
+
+
+    }
+
+    this.points = ko.observableArray([]);
+    var p = this.points;
+    $.getJSON("json/metro.json", function (data) {
+        data.forEach(function (block) {
+            p.push(block);
+        });
+    });
+
+    $("#lines").change(function () {
+        var selected = $("#lines option:selected").val();
+        if(selected === "all"){
+            $(".dropPin").show();
+            return;
         }
-    ]);
+        $(".dropPin").each(function () {
+            if ($(this).prop('title').includes(selected))
+                $(this).show();
+            else
+                $(this).hide();
+        });
+    });
+
+    var gpins = this.pins;
+    this.listClick = function (element) {
+        openInfoWindow(gpins()[element.id].marker);
+    }
 }
+
+var Styles = [];
+$.getJSON("json/map_styles.json", function (data) {
+    data.forEach(function (block) {
+        Styles.push(block);
+    });
+});
+
+function openInfoWindow(marker) {
+    if (infoWindow.marker != marker) {
+        if(infoWindow.marker)
+            infoWindow.marker.setAnimation(null);
+
+        infoWindow.marker = marker;
+        infoWindow.setContent('<h3>' + marker.title + '</h3>');
+        infoWindow.marker.setAnimation(google.maps.Animation.BOUNCE);
+        infoWindow.open(map, marker);
+        
+        infoWindow.addListener('closeclick',function(){
+            marker.setAnimation(null);
+        });
+    }
+}
+
 
 ko.applyBindings(vm = new ViewModel());
