@@ -15,9 +15,11 @@ var ViewModel = function () {
         });
     }
 
-    $("#lines").change(function () {
+    this.linesChange = function(){
         bounds = new google.maps.LatLngBounds();
         var selected = $("#lines option:selected").val();
+        var coordinates = [];
+
         if (selected === "all") {
             $(".dropPin").show();
         }
@@ -41,10 +43,23 @@ var ViewModel = function () {
         });
         map.fitBounds(bounds);
         infoWindow.close();
-    });
+    }
 
     this.listClick = function (element) {
+        map.setZoom(13);
+        map.setCenter(gpins()[element.index].marker.getPosition());
         openInfoWindow(gpins()[element.index].marker);
+    }
+
+    this.clicker = function() {
+        //Change this
+        //Consult this page http://knockoutjs.com/documentation/css-binding.html
+        $("#leftline").toggleClass("menu-on");
+        $("#leftline").toggleClass("menu-off");
+        $("#content").toggleClass("content-on");
+        $("#content").toggleClass("content-off");
+        $("#top-content").toggleClass("top-content-on");
+        $("#top-content").toggleClass("top-content-off");
     }
 }
 
@@ -53,8 +68,9 @@ function openInfoWindow(marker) {
         if (infoWindow.marker)
             infoWindow.marker.setAnimation(null);
 
+        getImage(marker.title, apiKey);
         infoWindow.marker = marker;
-        infoWindow.setContent('<h3>' + marker.title + '</h3>');
+        infoWindow.setContent('<h3>Loading</h3>');
         infoWindow.marker.setAnimation(google.maps.Animation.BOUNCE);
         infoWindow.open(map, marker);
 
@@ -81,14 +97,4 @@ function colorMarker(value) {
     return icon;
 }
 
-ko.applyBindings(vm = new ViewModel());
-
-$("#clicker").click(function () {
-    $("#leftline").toggleClass("menu-on");
-    $("#leftline").toggleClass("menu-off");
-    $("#content").toggleClass("content-on");
-    $("#content").toggleClass("content-off");
-    $("#top-content").toggleClass("top-content-on");
-    $("#top-content").toggleClass("top-content-off");
-});
-    
+ko.applyBindings(vm = new ViewModel());   

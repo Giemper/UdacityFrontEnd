@@ -1,4 +1,4 @@
-h1, h2, h3, label, ul li {
+h1, h2, h3, label, ul li, p {
     font-family: 'Arial', sans-serif;
 }
 html, body {
@@ -54,6 +54,16 @@ ul li {
     overflow-y: auto;
     height: calc(100% - 75px);
 }
+#floating-div {
+    background-color: white; 
+    width:300px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    box-shadow: 0px 3px 10px #888888;
+    text-align: center;
+}
+
 .cosa {
     height:60px; 
     position: relative;
@@ -69,7 +79,7 @@ ul li {
     background: #28426b;
     height: 100%;
 }
-.menu-off {
+.menu-off, .warning-off {
     display: none;
 }
 .content-on {
