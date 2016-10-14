@@ -1,38 +1,48 @@
 var map;
 var infoWindow;
+var bounds;
 
 function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 45.500618, lng: -73.599700 },
-        zoom: 13,
-        styles: Styles
-    });
-    
+    var Styles = [];
     infoWindow = new google.maps.InfoWindow();
-    var bounds = new google.maps.LatLngBounds();
+    bounds = new google.maps.LatLngBounds();
 
-    vm.points().forEach(function (point) {
-        if(point.id !== undefined){
-            vm.pins()[point.id] = new vm.Pin(point.name, point.lat, point.lng);
-            vm.pins()[vm.pins().length - 1].marker.addListener('click', function () {
-                // if (infoWindow.marker != this) {
-                //     if(infoWindow.marker)
-                //         infoWindow.marker.setAnimation(null);
-
-                //     infoWindow.marker = this;
-                //     infoWindow.setContent('<h3>' + this.title + '</h3>');
-                //     infoWindow.marker.setAnimation(google.maps.Animation.BOUNCE);
-                //     infoWindow.open(map, this);
-                    
-                //     infoWindow.addListener('closeclick',function(){
-                //         this.marker.setAnimation(null);
-                //     });
-                // }
-                openInfoWindow(this);
+    function getStyles () {
+        $.getJSON("json/map_styles.json", function (data) {
+            data.forEach(function (block) {
+                Styles.push(block);
             });
-            bounds.extend(vm.pins()[vm.pins().length - 1].marker.position);
-        }
-    });
 
-    map.fitBounds(bounds);
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 45.500618, lng: -73.599700 },
+                zoom: 13,
+                styles: Styles
+            });
+
+            getPoints();
+        });
+    }
+    
+   function getPoints() {
+        $.getJSON("json/metro.json", function (data) {
+            data.forEach(function (block, index) {
+                vm.points.push(block);
+                vm.points()[index].index = index;
+            });
+
+            vm.points().forEach(function (point, index) {
+                if(point.lat !== 0){
+                    vm.pins().push(new vm.Pin(point.name, point.lat, point.lng, point.value, points.index));
+                    vm.pins()[index].marker.addListener('click', function () {
+                        openInfoWindow(this);
+                    });
+                    bounds.extend(vm.pins()[index].marker.position);
+                }
+            });
+            
+            map.fitBounds(bounds);
+        });
+    }
+
+    getStyles();
 }
