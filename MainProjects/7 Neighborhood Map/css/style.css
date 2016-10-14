@@ -62,12 +62,15 @@ ul li {
 
 
 
-.menu-on {
+.menu-on, .menu-off {
     position: fixed;
     bottom: 0;
     width: 200px;
     background: #28426b;
     height: 100%;
+}
+.menu-off {
+    display: none;
 }
 .content-on {
     margin: 65px 0 0 200px;
@@ -82,10 +85,12 @@ ul li {
     margin: 0 0 0 10px;
 }
 
-
 @media only screen and (max-width: 700px) {
     .menu-on {
-        margin-left: -200px;
+        display: none;
+    }
+    .menu-off {
+        display: block;
     }
     .content-on {
         margin: 65px 0 0 0px;

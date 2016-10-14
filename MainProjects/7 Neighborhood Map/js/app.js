@@ -85,7 +85,7 @@ ko.applyBindings(vm = new ViewModel());
 
 $("#clicker").click(function () {
     $("#leftline").toggleClass("menu-on");
-    // $("#leftline").toggleClass("menu-off");
+    $("#leftline").toggleClass("menu-off");
     $("#content").toggleClass("content-on");
     $("#content").toggleClass("content-off");
     $("#top-content").toggleClass("top-content-on");
