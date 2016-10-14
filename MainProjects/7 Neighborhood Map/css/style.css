@@ -23,9 +23,15 @@ ul li {
     height: 100%;
 }
 #points li a {
-    padding-left: 15px;
+    padding-left: 5px;
+    font-size: 14px;
 }
-#menu:hover, #points li:hover {
+#points i {
+    float: left;
+    font-size: 16px; 
+    margin-left: 10px;
+}
+#clicker:hover, #points li:hover {
     background-color: rgba(255, 255, 255, 0.1);
     cursor:pointer;
 }
@@ -40,19 +46,7 @@ ul li {
     background-color: #f4f5f7;
     box-shadow: 0px 3px 10px #888888;
 }
-#leftline {
-    position: fixed;
-    bottom: 0;
-    width: 200px;
-    background: #28426b;
-    display: inline-block;
-    height: 100%;
-}
-#top-content {
-    margin: 0 0 0 210px;
-}
 #content {
-    margin: 65px 0 0 200px;
     padding: 0;
     height: 100%;
 }
@@ -64,4 +58,45 @@ ul li {
     height:60px; 
     position: relative;
     background: #68A37F;
+}
+
+
+
+.menu-on {
+    position: fixed;
+    bottom: 0;
+    width: 200px;
+    background: #28426b;
+    height: 100%;
+}
+.content-on {
+    margin: 65px 0 0 200px;
+}
+.content-off {
+    margin: 65px 0 0 0px;
+}
+.top-content-on {
+    margin: 0 0 0 210px;
+}
+.top-content-off {
+    margin: 0 0 0 10px;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .menu-on {
+        margin-left: -200px;
+    }
+    .content-on {
+        margin: 65px 0 0 0px;
+    }
+    .content-off {
+        margin: 65px 0 0 200px;
+    }
+    .top-content-on {
+        margin: 0 0 0 10px;
+    }
+    .top-content-off {
+        margin: 0 0 0 210px;
+    }
 }

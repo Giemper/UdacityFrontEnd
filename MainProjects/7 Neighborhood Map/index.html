@@ -11,24 +11,23 @@
 <body>
     
     <nav id="topline">
-        <header id="top-content">
-            <div class="container">
-                <i id="menu" class="material-icons" style="float: left">menu</i>
+        <header id="top-content" class="top-content-on">
+                <i id="clicker" class="material-icons" style="float: left">menu</i>
                 <h1 id="cat-title" class="no-highlight" style="text-align: center">Maps</h1>
-            </div>
+
         </header>
     </nav>
 
-    <section id="content">
+    <section id="content" class="content-on">
         <div id="map"></div>
     </section>
 
-    <aside id="leftline" >
+    <aside id="leftline" class="menu-on">
         <div id="control-panel">
             <header class="cosa">
                 <!--<input type="text" name="" value="" style="margin: 20px 0 0 12px">-->
                 <select id="lines" style="margin: 20px 0 0 12px; width:170px">
-                    <option value="all" selected="selected">All Lines</option>
+                    <option value="all">All Lines</option>
                     <option value="orange">Orange Line</option>
                     <option value="blue">Blue Line</option>
                     <option value="green">Green Line</option>
@@ -38,18 +37,24 @@
         </div>
         <ul id="points" data-bind="foreach: points">
             <li class="dropPin" data-bind="attr: { title: value }, click: $parent.listClick">
+                <i class="material-icons" 
+                data-bind="style: {color: (value == 'orange') ? 'orange' : 
+                                        (value == 'blue') ? 'blue' : 
+                                        (value == 'green') ? 'green' : 
+                                        (value == 'yellow') ? 'yellow' : 'red'}">place</i>
                 <a data-bind="text: name"></a>
             </li>
         </ul>
 
     </aside>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/knockout-3.4.0.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/map.js"></script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxtyZmUFKCzNYxAy2VUBQ12qhHK_mw0-g&v=3&callback=initMap">
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/knockout-3.4.0.js"></script>
-    <script src="js/app.js"></script>
+
     
     
 </body>
