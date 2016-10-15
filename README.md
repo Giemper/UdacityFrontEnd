@@ -12,7 +12,7 @@ Some of the projects make use of third-party libraries like [Bootstrap](http://g
 - [Online Resume](https://github.com/Giemper/UdacityFrontEnd/tree/master/MainProjects/4%20Online%20Resume)
 - [Arcade Game: Frogger](https://github.com/Giemper/UdacityFrontEnd/tree/master/MainProjects/5%20Arcade%20Game)
 - [Website Optimization](https://github.com/Giemper/UdacityFrontEnd/tree/master/MainProjects/6%20Website%20Optimization)
-- [Neighborhood Map](https://github.com/Giemper/UdacityFrontEnd/tree/master/MainProjects/7%20Neighborhood%20Map) - In Development
+- [Neighborhood Map](https://github.com/Giemper/UdacityFrontEnd/tree/master/MainProjects/7%20Neighborhood%20Map)
 
 ## Small Projects
 The **Small Projects** folder contains the smaller content made within lessons in the Nanodegree.
@@ -32,5 +32,4 @@ Just like in the **Main Projects**, some of these projects contain third-party l
 ### Nanodegree Status:
 - **Lesson:** Neighborhood Map
 - **Chapter:** Project
-- **Date:** 10/09/2016
-
+- **Date:** 10/15/2016

@@ -4,25 +4,25 @@
         "lat": 45.538653, 
         "lng": -73.613805,
         "value": "orange-blue",
-        "line": [{ "color": "Orange", "id": 8 }, { "color": "Blue", "id": 4 }]
+        "line": [{ "color": "orange", "id": 8 }, { "color": "blue", "id": 4 }]
     }, {
         "name": "Berri-UQAM",
         "lat": 45.514908, 
         "lng": -73.559786,
         "value": "orange-green-yellow",
-        "line": [{ "color": "Orange", "id": 14 }, { "color": "Green", "id": 13 }, { "color": "Yellow", "id": 1 }]
+        "line": [{ "color": "orange", "id": 14 }, { "color": "green", "id": 13 }, { "color": "yellow", "id": 1 }]
     }, {
         "name": "Lionel-Groulx",
         "lat": 45.482820, 
         "lng": -73.579734,
         "value": "orange-green",
-        "line": [{ "color": "Orange", "id": 21 }, { "color": "Green", "id": 20 }]
+        "line": [{ "color": "orange", "id": 21 }, { "color": "green", "id": 20 }]
     }, {
         "name": "Snowdon",
         "lat": 45.485532, 
         "lng": -73.627996,
         "value": "orange-blue",
-        "line": [{ "color": "Orange", "id": 25 }, { "color": "Blue", "id": 12 }]
+        "line": [{ "color": "orange", "id": 25 }, { "color": "blue", "id": 12 }]
     }, 
 
     
@@ -34,163 +34,163 @@
         "lat": 45.558424, 
         "lng": -73.721544,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 1 }]
+        "line": [{ "color": "orange", "id": 1 }]
     }, {
         "name": "De La Concorde",
         "lat": 45.560710, 
         "lng": -73.709703,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 2 }]
+        "line": [{ "color": "orange", "id": 2 }]
     }, {
         "name": "Cartier",
         "lat": 45.560100, 
         "lng": -73.681835,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 3 }]
+        "line": [{ "color": "orange", "id": 3 }]
     }, {
         "name": "Henri-Bourassa",
         "lat": 45.556084, 
         "lng": -73.667345,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 4 }]
+        "line": [{ "color": "orange", "id": 4 }]
     }, {
         "name": "Sauvé",
         "lat": 45.550566, 
         "lng": -73.656313,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 5 }]
+        "line": [{ "color": "orange", "id": 5 }]
     }, {
         "name": "Crémazie",
         "lat": 45.545840, 
         "lng": -73.638486,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 6 }]
+        "line": [{ "color": "orange", "id": 6 }]
     }, {
         "name": "Jarry",
         "lat": 45.543271, 
         "lng": -73.628232,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 7 }]
+        "line": [{ "color": "orange", "id": 7 }]
     }, {
         "name": "Beaubien",
         "lat": 45.535533, 
         "lng": -73.604504,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 9 }]
+        "line": [{ "color": "orange", "id": 9 }]
     }, {
         "name": "Rosemont",
         "lat": 45.531205, 
         "lng": -73.597787,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 10 }]
+        "line": [{ "color": "orange", "id": 10 }]
     }, {
         "name": "Laurier",
         "lat": 45.527924, 
         "lng": -73.588950,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 11 }]
+        "line": [{ "color": "orange", "id": 11 }]
     }, {
         "name": "Mont-Royal",
         "lat": 45.524528, 
         "lng": -73.581726,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 12 }]
+        "line": [{ "color": "orange", "id": 12 }]
     }, {
         "name": "Sherbrooke",
         "lat": 45.518164, 
         "lng": -73.568603,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 13 }]
+        "line": [{ "color": "orange", "id": 13 }]
     }, {
         "name": "Champ-De-Mars",
         "lat": 45.510188, 
         "lng": -73.556339,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 15 }]
+        "line": [{ "color": "orange", "id": 15 }]
     }, {
         "name": "Place-D'Armes",
         "lat": 45.505007, 
         "lng": -73.559615,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 16 }]
+        "line": [{ "color": "orange", "id": 16 }]
     }, {
         "name": "Square-Victoria-OACI",
         "lat": 45.501723,
         "lng": -73.564006,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 17 }]
+        "line": [{ "color": "orange", "id": 17 }]
     }, {
         "name": "Bonaventure",
         "lat": 45.498025,
         "lng": -73.566839,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 18 }]
+        "line": [{ "color": "orange", "id": 18 }]
     }, {
         "name": "Lucien-L'Allier",
         "lat": 45.495051, 
         "lng": -73.570938,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 19 }]
+        "line": [{ "color": "orange", "id": 19 }]
     }, {
         "name": "Georges-Vanier",
         "lat": 45.488909,
         "lng": -73.576502,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 20 }]
+        "line": [{ "color": "orange", "id": 20 }]
     }, {
         "name": "Place-Saint-Henri",
         "lat": 45.477063, 
         "lng": -73.586578,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 22 }]
+        "line": [{ "color": "orange", "id": 22 }]
     }, {
         "name": "Vendôme",
         "lat": 45.473872, 
         "lng": -73.603802,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 23 }]
+        "line": [{ "color": "orange", "id": 23 }]
     }, {
         "name": "Villa-Maria",
         "lat": 45.479591, 
         "lng": -73.619817,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 24 }]
+        "line": [{ "color": "orange", "id": 24 }]
     }, {
         "name": "Côte-Sainte-Catherine",
         "lat": 45.492444, 
         "lng": -73.632718,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 26 }]
+        "line": [{ "color": "orange", "id": 26 }]
     }, {
         "name": "Plamondon",
         "lat": 45.495054, 
         "lng": -73.639284,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 27 }]
+        "line": [{ "color": "orange", "id": 27 }]
     }, {
         "name": "Namur",
         "lat": 45.494994, 
         "lng": -73.653024,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 28 }]
+        "line": [{ "color": "orange", "id": 28 }]
     }, {
         "name": "De La Savane",
         "lat": 45.500340, 
         "lng": -73.661529,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 29 }]
+        "line": [{ "color": "orange", "id": 29 }]
     }, {
         "name": "Du Collège",
         "lat": 45.509427, 
         "lng": -73.674696,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 30 }]
+        "line": [{ "color": "orange", "id": 30 }]
     }, {
         "name": "Côte-Vertu",
         "lat": 45.514265, 
         "lng": -73.683324,
         "value": "orange",
-        "line": [{ "color": "Orange", "id": 31 }]
+        "line": [{ "color": "orange", "id": 31 }]
     },
 
 
@@ -202,61 +202,61 @@
         "lat": 45.559932, 
         "lng": -73.600097,
         "value": "blue",
-        "line": [ { "color": "Blue", "id": 1 } ]
+        "line": [ { "color": "blue", "id": 1 } ]
     }, {
         "name": "D'Iberville",
         "lat": 45.553374, 
         "lng": -73.602414,
         "value": "blue",
-        "line": [ { "color": "Blue", "id": 2 } ]
+        "line": [ { "color": "blue", "id": 2 } ]
     }, {
         "name": "Fabre",
         "lat": 45.547154, 
         "lng": -73.607764,
         "value": "blue",
-        "line": [ { "color": "Blue", "id": 3 } ]
+        "line": [ { "color": "blue", "id": 3 } ]
     }, {
         "name": "De Castelnau",
         "lat": 45.535214, 
         "lng": -73.619923,
         "value": "blue",
-        "line": [ { "color": "Blue", "id": 5 } ]
+        "line": [ { "color": "blue", "id": 5 } ]
     }, {
         "name": "Parc",
         "lat": 45.530400, 
         "lng": -73.623820,
         "value": "blue",
-        "line": [ { "color": "Blue", "id": 6 } ]
+        "line": [ { "color": "blue", "id": 6 } ]
     }, {
         "name": "Acadie",
         "lat": 45.523426, 
         "lng": -73.623754,
         "value": "blue",
-        "line": [ { "color": "Blue", "id": 7 } ]
+        "line": [ { "color": "blue", "id": 7 } ]
     }, {
         "name": "Outremont",
         "lat": 45.520111, 
         "lng": -73.614952,
         "value": "blue",
-        "line": [ { "color": "Blue", "id": 8 } ]
+        "line": [ { "color": "blue", "id": 8 } ]
     }, {
         "name": "Édouard Montpetit",
         "lat": 45.510081, 
         "lng": -73.612566,
         "value": "blue",
-        "line": [ { "color": "Blue", "id": 9 } ]
+        "line": [ { "color": "blue", "id": 9 } ]
     }, {
         "name": "Univerité De Montréal",
         "lat": 45.503203, 
         "lng": -73.618175,
         "value": "blue",
-        "line": [ { "color": "Blue", "id": 10 } ]
+        "line": [ { "color": "blue", "id": 10 } ]
     }, {
         "name": "Cote Des Neiges",
         "lat": 45.496232,
         "lng": -73.622552,
         "value": "blue",
-        "line": [ { "color": "Blue", "id": 11 } ]
+        "line": [ { "color": "blue", "id": 11 } ]
     },
 
 
@@ -268,152 +268,152 @@
         "lat": 45.596846, 
         "lng": -73.534406,
         "value": "green",
-        "line": [ { "color": "Green", "id": 1 } ]
+        "line": [ { "color": "green", "id": 1 } ]
     }, {
         "name": "Radisson",
         "lat": 45.589300, 
         "lng": -73.539597,
         "value": "green",
-        "line": [ { "color": "Green", "id": 2 } ]
+        "line": [ { "color": "green", "id": 2 } ]
     },  {
         "name": "Langelier",
         "lat": 45.582851, 
         "lng": -73.542618,
         "value": "green",
-        "line": [ { "color": "Green", "id": 3 } ]
+        "line": [ { "color": "green", "id": 3 } ]
     }, {
         "name": "Cadillac",
         "lat": 45.576918, 
         "lng": -73.546738,
         "value": "green",
-        "line": [ { "color": "Green", "id": 4 } ]
+        "line": [ { "color": "green", "id": 4 } ]
     }, {
         "name": "Assomption",
         "lat": 45.569300, 
         "lng": -73.546718,
         "value": "green",
-        "line": [ { "color": "Green", "id": 5 } ]
+        "line": [ { "color": "green", "id": 5 } ]
     }, {
         "name": "Viau",
         "lat": 45.561155, 
         "lng": -73.547237,
         "value": "green",
-        "line": [ { "color": "Green", "id": 6 } ]
+        "line": [ { "color": "green", "id": 6 } ]
     }, {
         "name": "Pie-IX",
         "lat": 45.554026, 
         "lng": -73.551915,
         "value": "green",
-        "line": [ { "color": "Green", "id": 7 } ]
+        "line": [ { "color": "green", "id": 7 } ]
     }, {
         "name": "Joliette",
         "lat": 45.547024, 
         "lng": -73.551550,
         "value": "green",
-        "line": [ { "color": "Green", "id": 8 } ]
+        "line": [ { "color": "green", "id": 8 } ]
     }, {
         "name": "Préfontaine",
         "lat": 45.541677, 
         "lng": -73.554239,
         "value": "green",
-        "line": [ { "color": "Green", "id": 9 } ]
+        "line": [ { "color": "green", "id": 9 } ]
     }, {
         "name": "Frontenac",
         "lat": 45.533170, 
         "lng": -73.552147,
         "value": "green",
-        "line": [ { "color": "Green", "id": 10 } ]
+        "line": [ { "color": "green", "id": 10 } ]
     }, {
         "name": "Papineau",
         "lat": 45.523707, 
         "lng": -73.552083,
         "value": "green",
-        "line": [ { "color": "Green", "id": 11 } ]
+        "line": [ { "color": "green", "id": 11 } ]
     }, {
         "name": "Beaudry",
         "lat": 45.518994, 
         "lng": -73.555935,
         "value": "green",
-        "line": [ { "color": "Green", "id": 12 } ]
+        "line": [ { "color": "green", "id": 12 } ]
     }, {
         "name": "Saint-Laurent",
         "lat": 45.510822, 
         "lng": -73.564786,
         "value": "green",
-        "line": [ { "color": "Green", "id": 14 } ]
+        "line": [ { "color": "green", "id": 14 } ]
     }, {
         "name": "Place-Des-Arts",
         "lat": 45.507965, 
         "lng": -73.568616,
         "value": "green",
-        "line": [ { "color": "Green", "id": 15 } ]
+        "line": [ { "color": "green", "id": 15 } ]
     }, {
         "name": "McGill",
         "lat": 45.503912, 
         "lng": -73.571674,
         "value": "green",
-        "line": [ { "color": "Green", "id": 16 } ]
+        "line": [ { "color": "green", "id": 16 } ]
     }, {
         "name": "Peel",
         "lat": 45.501145, 
         "lng": -73.574635,
         "value": "green",
-        "line": [ { "color": "Green", "id": 17 } ]
+        "line": [ { "color": "green", "id": 17 } ]
     }, {
         "name": "Guy-Concordia",
         "lat": 45.495151, 
         "lng": -73.579978,
         "value": "green",
-        "line": [ { "color": "Green", "id": 18 } ]
+        "line": [ { "color": "green", "id": 18 } ]
     }, {
         "name": "Atwater",
         "lat": 45.489698, 
         "lng": -73.585181,
         "value": "green",
-        "line": [ { "color": "Green", "id": 19 } ]
+        "line": [ { "color": "green", "id": 19 } ]
     }, {
         "name": "Charlevoix",
         "lat": 45.478177, 
         "lng": -73.569399,
         "value": "green",
-        "line": [ { "color": "Green", "id": 21 } ]
+        "line": [ { "color": "green", "id": 21 } ]
     }, {
         "name": "Lasalle",
         "lat": 45.470812, 
         "lng": -73.566159,
         "value": "green",
-        "line": [ { "color": "Green", "id": 22 } ]
+        "line": [ { "color": "green", "id": 22 } ]
     }, {
         "name": "De L'Eglise",
         "lat": 45.461877, 
         "lng": -73.567445,
         "value": "green",
-        "line": [ { "color": "Green", "id": 23 } ]
+        "line": [ { "color": "green", "id": 23 } ]
     },
      {
         "name": "Verdun",
         "lat": 45.459214, 
         "lng": -73.571691,
         "value": "green",
-        "line": [ { "color": "Green", "id": 24 } ]
+        "line": [ { "color": "green", "id": 24 } ]
     }, {
         "name": "Jolicoeur",
         "lat": 45.456755, 
         "lng": -73.582093,
         "value": "green",
-        "line": [ { "color": "Green", "id": 25 } ]
+        "line": [ { "color": "green", "id": 25 } ]
     }, {
         "name": "Monk",
         "lat": 45.450950, 
         "lng": -73.593488,
         "value": "green",
-        "line": [ { "color": "Green", "id": 26 } ]
+        "line": [ { "color": "green", "id": 26 } ]
     }, {
         "name": "Angrignon",
         "lat": 45.446247, 
         "lng": -73.603799,
         "value": "green",
-        "line": [ { "color": "Green", "id": 27 } ]
+        "line": [ { "color": "green", "id": 27 } ]
     },
 
 
@@ -425,12 +425,12 @@
         "lat": 45.512441,
         "lng": -73.533033,
         "value": "yellow",
-        "line": [ { "color": "Yellow", "id": 2 } ]
+        "line": [ { "color": "yellow", "id": 2 } ]
     }, {
         "name": "Longueuil",
         "lat": 45.524830, 
         "lng": -73.522112,
         "value": "yellow",
-        "line": [ { "color": "Yellow", "id": 3 } ]
+        "line": [ { "color": "yellow", "id": 3 } ]
     }
 ]

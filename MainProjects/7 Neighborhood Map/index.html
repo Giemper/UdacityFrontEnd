@@ -3,27 +3,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <title>Neighborhood Map</title>
+    <title>Neighborhood Map - Montreal Metro</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
     
 </head>
 <body>
     
+    <!--nav bar with the name of the app, and a toggle button for the sidebar list-->
     <nav id="topline">
-        <header id="top-content" class="top-content-on">
+        <header id="top_content" data-bind="css: { top_content_on: toggle() === true, top_content_off: toggle() === false }">
                 <i id="clicker" class="material-icons" style="float: left"
                 data-bind="click: clicker">menu</i>
-                <h1 id="cat-title" class="no-highlight" style="text-align: center">Maps</h1>
+                <h1 id="cat-title" class="no-highlight" style="text-align: center">Montreal Metro</h1>
 
         </header>
     </nav>
 
-    <section id="content" class="content-on">
+    <!--displays the map-->
+    <section id="content" data-bind="css: { content_on: toggle() === true, content_off: toggle() === false }">
         <div id="map"></div>
     </section>
 
-    <aside id="leftline" class="menu-on">
+    <!--displays the sidebar list and the filter menu-->
+    <aside id="leftline" data-bind="css: { menu_on: toggle() === true, menu_off: toggle() === false }">
         <div id="control-panel">
             <header class="cosa">
                 <!--<input type="text" name="" value="" style="margin: 20px 0 0 12px">-->
@@ -38,7 +41,7 @@
             </header>
         </div>
         <ul id="points" data-bind="foreach: points">
-            <li class="dropPin" data-bind="attr: { title: value }, click: $parent.listClick">
+            <li class="dropPin" data-bind="attr: { title: value }, click: $parent.listClick, event: { mouseover: $parent.enableBounce, mouseout: $parent.disableBounce }">
                 <i class="material-icons" 
                 data-bind="style: {color: (value == 'orange') ? 'orange' : 
                                         (value == 'blue') ? 'blue' : 
@@ -47,9 +50,9 @@
                 <a data-bind="text: name"></a>
             </li>
         </ul>
-
     </aside>
 
+    <!--warning prompt-->
     <div style="position: absolute; top: 30%; width: 100%" class="warning-off">
         <section id="floating-div">
             <br>
@@ -67,6 +70,4 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxtyZmUFKCzNYxAy2VUBQ12qhHK_mw0-g&v=3&callback=initMap">
     </script>
-    
-    
 </body>

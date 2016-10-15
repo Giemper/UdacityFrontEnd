@@ -43,7 +43,8 @@ ul li {
     right: 0;
     height:60px; 
     position: fixed;
-    background-color: #f4f5f7;
+    /*background-color: #f4f5f7;*/
+    background: #edf1f7;
     box-shadow: 0px 3px 10px #888888;
 }
 #content {
@@ -67,51 +68,53 @@ ul li {
 .cosa {
     height:60px; 
     position: relative;
-    background: #68A37F;
+    /*background: #68A37F;*/
+    background: #3c434f;
 }
 
 
 
-.menu-on, .menu-off {
+.menu_on, .menu_off {
     position: fixed;
     bottom: 0;
     width: 200px;
-    background: #28426b;
     height: 100%;
+    /*background: #28426b;*/
+    background: #4c5563;
 }
-.menu-off, .warning-off {
+.menu_off, .warning-off {
     display: none;
 }
-.content-on {
+.content_on {
     margin: 65px 0 0 200px;
 }
-.content-off {
+.content_off {
     margin: 65px 0 0 0px;
 }
-.top-content-on {
+.top_content_on {
     margin: 0 0 0 210px;
 }
-.top-content-off {
+.top_content_off {
     margin: 0 0 0 10px;
 }
 
 @media only screen and (max-width: 700px) {
-    .menu-on {
+    .menu_on {
         display: none;
     }
-    .menu-off {
+    .menu_off {
         display: block;
     }
-    .content-on {
+    .content_on {
         margin: 65px 0 0 0px;
     }
-    .content-off {
+    .content_off {
         margin: 65px 0 0 200px;
     }
-    .top-content-on {
+    .top_content_on {
         margin: 0 0 0 10px;
     }
-    .top-content-off {
+    .top_content_off {
         margin: 0 0 0 210px;
     }
 }
