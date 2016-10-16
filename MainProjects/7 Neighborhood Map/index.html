@@ -15,7 +15,7 @@
         <header id="top_content" data-bind="css: { top_content_on: toggle() === true, top_content_off: toggle() === false }">
                 <i id="clicker" class="material-icons" style="float: left"
                 data-bind="click: clicker">menu</i>
-                <h1 id="cat-title" class="no-highlight" style="text-align: center">Montreal Metro</h1>
+                <h1 class="no-highlight" style="text-align: center">Montreal Metro</h1>
 
         </header>
     </nav>
@@ -29,9 +29,8 @@
     <aside id="leftline" data-bind="css: { menu_on: toggle() === true, menu_off: toggle() === false }">
         <div id="control-panel">
             <header class="cosa">
-                <!--<input type="text" name="" value="" style="margin: 20px 0 0 12px">-->
                 <select id="lines" style="margin: 20px 0 0 12px; width:170px"
-                data-bind="event: { change: linesChange }">
+                data-bind="value: selected, event: { change: linesChange }">
                     <option value="all">All Lines</option>
                     <option value="orange">Orange Line</option>
                     <option value="blue">Blue Line</option>
@@ -40,7 +39,7 @@
                 </select>
             </header>
         </div>
-        <ul id="points" data-bind="foreach: points">
+        <ul id="points" data-bind="foreach: list">
             <li class="dropPin" data-bind="attr: { title: value }, click: $parent.listClick, event: { mouseover: $parent.enableBounce, mouseout: $parent.disableBounce }">
                 <i class="material-icons" 
                 data-bind="style: {color: (value == 'orange') ? 'orange' : 
@@ -68,6 +67,6 @@
     <!--<script src="js/image.js"></script>-->
     <script src="js/flickr.js"></script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxtyZmUFKCzNYxAy2VUBQ12qhHK_mw0-g&v=3&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxtyZmUFKCzNYxAy2VUBQ12qhHK_mw0-g&v=3&callback=initMap" onerror="errorMap()">
     </script>
 </body>

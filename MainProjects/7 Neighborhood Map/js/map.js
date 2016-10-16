@@ -39,6 +39,7 @@ function initMap() {
         $.getJSON("json/metro.json", function (data) {
             data.forEach(function (block, index) {
                 vm.points.push(block);
+                vm.list.push(block);
                 vm.points()[index].index = index;
             });
 
@@ -70,6 +71,11 @@ function initMap() {
 
     //Initiates the drawing of the map
     getStyles();
+}
+
+function errorMap() {
+    $(".warning-off").toggleClass("warning-off");
+    $("#warning").text("Google Maps couldn't be loaded.");
 }
 
 // openInfoWindow handles the information and position
@@ -106,13 +112,13 @@ function openInfoWindow(marker) {
 // to draw the path of the metro in order.
 function drawPath (coor, select) {
     var color;
-    if(select === "blue")
+    if(select === 'blue')
         color = '#1252ba';
-    else if (select === "green")
+    else if (select === 'green')
         color = '#14910b';
-    else if (select === "yellow")
+    else if (select === 'yellow')
         color = '#ffef66';
-    else if (select === "orange")
+    else if (select === 'orange')
         color = '#f9a913';
 
     coor.sort(function (a, b) {
@@ -139,3 +145,11 @@ function drawPath (coor, select) {
     //Adds the path to the map
     path.setMap(map);
 }
+
+//Resizes the map when the window change size
+window.onresize = function() {
+    map.fitBounds(bounds);
+}
+
+//Creates and applies a ViewModel using KnockoutJS
+ko.applyBindings(vm = new ViewModel());
