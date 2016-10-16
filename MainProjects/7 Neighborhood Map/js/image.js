@@ -11,10 +11,10 @@ var apiKey = 'AIzaSyBxtyZmUFKCzNYxAy2VUBQ12qhHK_mw0-g';
 var apiKey2 = 'AIzaSyCcWbFVfs728cl5u6WM4itf-A6hCRDgGB4';
 var cseID = '002919751662395594107:hetlad5jjpe';
 
-// getImage creates the query request url,
+// getGoogle creates the query request url,
 // parses through the response json,
 // sets a fail callback
-function getImage (query, api) {
+function getGoogle (query, api) {
     var title = query;
     var repeat = false;
     var imgURL;
@@ -50,7 +50,7 @@ function getImage (query, api) {
         if(api === apiKey){
             console.log("Second Key used");
             repeat = true;
-            getImage(query, apiKey2);
+            getGoogle(query, apiKey2);
         }
         else {
             repeat = false;
@@ -61,16 +61,16 @@ function getImage (query, api) {
     
     // always() will generate the content of the infowindow either way.
     .always(function() {
-        var content = '<article>' + 
-        '<h3>' + title + '</h3><figure style="margin:0; padding:0;"><a href="' + imgURL + '" target="_blank">' + 
+        var content = 
+        '<figure style="margin:0; padding:0;"><a href="' + imgURL + '" target="_blank">' + 
         '<img src="'+ imgURL +'" style="max-width: 280px" onerror="imgFail(this)"></a>' +
         '<figcaption style="max-width:280px">' + snippet + '</figcaption>' + 
         '<figcaption style="max-width:280px; font-size:9px;">' +
         '<a href="https://www.google.com/imghp" style="color: #949aa3; text-decoration:none" target="_blank">' + 
-        'Source: Google Image Search</a></figcaption>' + '</figure>' +
-        '</article>';
+        'Source: Google Image Search</a></figcaption>' + '</figure>';
         if(repeat === false)
-            infoWindow.setContent(content);
+            return content;
+            // infoWindow.setContent(content);
     });
 }
 

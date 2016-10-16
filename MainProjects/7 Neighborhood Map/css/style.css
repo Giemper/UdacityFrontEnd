@@ -9,12 +9,12 @@ html, body {
 body {
     height: calc(100% - 65px);
 }
-ul {
+#leftline ul {
     list-style: none;
     width:100%;
     margin-left: -40px;
 }
-ul li {
+#leftline ul li {
     width:100%;
     color: white;
     margin-bottom: 10px;
@@ -71,8 +71,6 @@ ul li {
     /*background: #68A37F;*/
     background: #3c434f;
 }
-
-
 
 .menu_on, .menu_off {
     position: fixed;

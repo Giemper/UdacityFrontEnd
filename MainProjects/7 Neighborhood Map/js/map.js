@@ -81,10 +81,15 @@ function openInfoWindow(marker) {
         //remove the animation.
         if (infoWindow.marker)
             infoWindow.marker.setAnimation(null);
-
+        
+        // NOT IN USE
         // getImage returns the first result of a 
         // Google Image Custom Search using Google CSE API.
-        getImage(marker.title, apiKey);
+        // getImage(marker.title, apiKey);
+
+        // getFlickr returns an ugly photo using
+        // Flickr API. That's about it.
+        getFlickr(marker.title);
 
         infoWindow.marker = marker;
         infoWindow.setContent('<h3>Loading</h3>');
