@@ -64,14 +64,12 @@ $(function() {
         // Loads the second feed in the allFeeds array
         // Makes sure to wait until the function has been finished. 
         beforeEach(function(done) {
-            loadFeed(0, function() {
-                done();
-            });
+            loadFeed(0, done);
         });
 
         // Makes sure that the number of entries is longer than 0
         it('loadFeed was loaded correctly', function() {
-            expect($(".feed > .entry-link > .entry").length).toBeGreaterThan(0);
+            expect($(".feed .entry").length).toBeGreaterThan(0);
         });
     });
 
@@ -88,18 +86,16 @@ $(function() {
         beforeEach(function(done) {
             loadFeed(1, function() {
                 pastFeed = $(".feed").html();
-                done();
-            });
-            
-            loadFeed(0, function() {
-                currentFeed = $(".feed").html();
-                done();
+                loadFeed(0, function() {
+                    currentFeed = $(".feed").html();
+                    done();
+                });
             });
         });
 
         // Compares pastFeed with currentFeed to prove that 
         // there has been a change in the displayed feed.
-        it('new feed is updated', function(){
+        it('new feed is updated', function() {
             expect(pastFeed === currentFeed).toBe(false);
         });
     });

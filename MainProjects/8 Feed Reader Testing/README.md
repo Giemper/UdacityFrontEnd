@@ -30,7 +30,7 @@ Instructions to do so:
     * Access to the app with a web browser through "localhost:8080"
 
 ## Resources Used
-- [Google Maps API](https://developers.google.com/maps/)
+- [Jasmine 2.2](http://jasmine.github.io/)
 - [JQuery](https://jquery.com/)
 
 10/17/16
