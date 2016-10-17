@@ -61,18 +61,17 @@ $(function() {
     });
 
     describe('Initial Entries', function() {
-
         // Loads the second feed in the allFeeds array
         // Makes sure to wait until the function has been finished. 
         beforeEach(function(done) {
-            loadFeed(1, function() {
+            loadFeed(0, function() {
                 done();
             });
         });
 
         // Makes sure that the number of entries is longer than 0
         it('loadFeed was loaded correctly', function() {
-            expect($(".feed > .entry-link > .entry").length > 0).toBe(true);
+            expect($(".feed > .entry-link > .entry").length).toBeGreaterThan(0);
         });
     });
 
@@ -87,11 +86,15 @@ $(function() {
         // Saves the state of the element .feed before and after
         // loadFeed has been used.
         beforeEach(function(done) {
-            pastFeed = $(".feed");
-            loadFeed(0, function() {
+            loadFeed(1, function() {
+                pastFeed = $(".feed").html();
                 done();
             });
-            currentFeed = $(".feed");
+            
+            loadFeed(0, function() {
+                currentFeed = $(".feed").html();
+                done();
+            });
         });
 
         // Compares pastFeed with currentFeed to prove that 
