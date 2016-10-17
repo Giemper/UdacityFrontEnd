@@ -34,7 +34,7 @@ be selected clicking directly at a marker, or selecting an option in the sidebar
 ![Infowindow](http://image.prntscr.com/image/5cbff42215cb4075a5503b86657d82f5.png)
 
 
-## Running these code
+## Running this code
 
 #### Web Mirror
 - [Live Demo](http://giemper.com/Udacity/Map/)

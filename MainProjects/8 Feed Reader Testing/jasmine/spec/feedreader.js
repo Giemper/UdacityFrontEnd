@@ -6,11 +6,6 @@
 
 $(function() {
 
-    // observeFeed will be use to compare the first loaded feed
-    // versus a second feed. This will be used to check that the
-    // DOM is being updated when a new feed is selected.
-    var observeFeed;
-
     describe('RSS Feeds', function() {
 
         it('are defined', function() {
@@ -67,27 +62,6 @@ $(function() {
 
     describe('Initial Entries', function() {
 
-        // Loads the first feed in the allFeeds array
-        // Makes sure to wait until the function has been finished. 
-        beforeEach(function(done) {
-            loadFeed(0, function() {
-                done();
-            });
-        });
-
-        // Saves the current state of the element with class .feed
-        // Makes sure that the number of entries is longer than 0
-        it('loadFeed was loaded correctly', function() {
-            observeFeed = $(".feed");
-            expect($(".feed > .entry-link > .entry").length > 0).toBe(true);
-        });
-    });
-
-    describe('New Feed Selection', function() {
-        // currentFeed is going to be used to compare the current
-        // feed to the past one.
-        var currentFeed;
-
         // Loads the second feed in the allFeeds array
         // Makes sure to wait until the function has been finished. 
         beforeEach(function(done) {
@@ -96,12 +70,34 @@ $(function() {
             });
         });
 
-        // Saves the current state of the element with .feed
-        // Compares observeFeed with currentFeed to prove that 
+        // Makes sure that the number of entries is longer than 0
+        it('loadFeed was loaded correctly', function() {
+            expect($(".feed > .entry-link > .entry").length > 0).toBe(true);
+        });
+    });
+
+    describe('New Feed Selection', function() {
+        // currentFeed is going to be used to compare the current
+        // feed to the past one.
+        var pastFeed,
+            currentFeed;
+
+        // Loads the first feed in the allFeeds array.
+        // Makes sure to wait until the function has been finished.
+        // Saves the state of the element .feed before and after
+        // loadFeed has been used.
+        beforeEach(function(done) {
+            pastFeed = $(".feed");
+            loadFeed(0, function() {
+                done();
+            });
+            currentFeed = $(".feed");
+        });
+
+        // Compares pastFeed with currentFeed to prove that 
         // there has been a change in the displayed feed.
         it('new feed is updated', function(){
-            currentFeed = $(".feed");
-            expect(observeFeed === currentFeed).toBe(false);
+            expect(pastFeed === currentFeed).toBe(false);
         });
     });
 }());
